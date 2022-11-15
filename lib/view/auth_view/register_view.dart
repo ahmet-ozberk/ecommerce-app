@@ -82,12 +82,12 @@ class RegisterView extends ConsumerWidget {
             width: context.width * 0.55,
             items: [
               GrockMenuItem(
-                text: "Kameradan",
+                text: "Kameradan Çek",
                 trailing: const Icon(CupertinoIcons.camera_fill),
                 onTap: () => read.openImageSelected(ImageSource.camera),
               ),
               GrockMenuItem(
-                text: "Galeriden",
+                text: "Galeriden Seç",
                 trailing: const Icon(CupertinoIcons.photo_fill_on_rectangle_fill),
                 onTap: () => read.openImageSelected(ImageSource.gallery),
               ),
