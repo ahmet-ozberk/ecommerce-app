@@ -1,3 +1,4 @@
+import 'package:ecommerce/utils/app_color.dart';
 import 'package:ecommerce/utils/controllers.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -44,7 +45,7 @@ class AppNavigationBar extends ConsumerWidget {
                     width: Grock.width / 5.9,
                     child: Icon(
                       value.icon,
-                      color: watch.currentIndex == index ? Colors.black : Colors.grey,
+                      color: watch.currentIndex == index ? AppColor.hardGreen : AppColor.greenGray,
                     ),
                   ),
                 );

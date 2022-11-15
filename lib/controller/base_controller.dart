@@ -1,19 +1,17 @@
 import 'package:ecommerce/model/base_model.dart';
+import 'package:ecommerce/view/basket_view.dart';
+import 'package:ecommerce/view/home_view.dart';
+import 'package:ecommerce/view/profile_view.dart';
+import 'package:ecommerce/view/search_view.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:grock/grock.dart';
 
 class BaseController extends ChangeNotifier {
   final List<BaseModel> _baseModel = [
-    BaseModel(icon: CupertinoIcons.home, page: Container(color: Colors.red), key: GlobalKey()),
-    BaseModel(
-        icon: CupertinoIcons.search,
-        page: Container(
-          color: Colors.green,
-        ),
-        key: GlobalKey()),
-    BaseModel(icon: CupertinoIcons.shopping_cart, page: Container(color: Colors.blue), key: GlobalKey()),
-    BaseModel(icon: CupertinoIcons.person, page: Container(color: Colors.amber), key: GlobalKey()),
+    BaseModel(icon: CupertinoIcons.home, page: const HomeView(), key: GlobalKey()),
+    BaseModel(icon: CupertinoIcons.search, page: const SearchView(), key: GlobalKey()),
+    BaseModel(icon: CupertinoIcons.shopping_cart, page: const BasketView(), key: GlobalKey()),
+    BaseModel(icon: CupertinoIcons.person, page: const ProfileView(), key: GlobalKey()),
   ];
 
   List<BaseModel> get baseModel => _baseModel;
